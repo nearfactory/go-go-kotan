@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/* ======================================== */
+
+@font-face{
+  font-family: 'IBM Plex Sans JP';
+  src: url('../font/IBMPlexSansJP-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'IBM Plex Sans JP';
+  src: url('../font/IBMPlexSansJP-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'IBM Plex Sans JP';
+  src: url('../font/IBMPlexSansJP-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'IBM Plex Sans JP';
+  src: url('../font/IBMPlexSansJP-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ======================================== */
+
+:root{
+  --background1: #ffffff;
+  --background2: #f1f1f1;
+  --background3: #f9f9f9;
+  
+  --text1: #222222;
+  --text2: #777777;
+
+  --accent1: #CCEB90;
+  --accent2: #8E9680;
+  --accent3: #606B4A;
+  --accent4: #283312;
+}
+
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-size: 10px;
+}
+
+html{
+  background-color: var(--background2);
+}
+
+body{
+  background-color: var(--background2);
+}
+
+/* ======================================== */
+
+header{
+  position: fixed;
+  top: 2.5rem;
+  left: 2.5rem;
+  z-index: 10;
+
+  display: block;
+  width: calc(100% - 6rem);
+  height: 3rem;
+
+  margin: 0;
+  padding: 0.5rem;
+
+  background: #8E968066;
+  border-radius: 0.75rem;
+
+  box-shadow: 0 0.5rem 3rem rgba(0.85, 0.85, 0.85, 0.1);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+}
+
+header>a{
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  color: var(--text1);
+  font-size: 2rem;
+  font-weight: 600;
+
+  text-align: center;
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+span#top{
+  display: block;
+  width: 100%;
+  height: 6rem;
+
+  background-color: #00000000;
+}
+
+/* ======================================== */
+
+main{
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+
+  width: calc(100% - 6rem);
+  height: auto;
+
+  margin: 0 1rem;
+  padding: 2rem;
+}
+
+/* ======================================== */
+
+.word-container{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  width: 100%;
+  height: 6rem;
+
+  margin: 1rem auto;
+  padding: 1rem 0;
+
+  background-color: var(--background3);
+  border-radius: 0.75rem;
+
+  box-shadow: 0 0.5rem 3rem rgba(0.85, 0.85, 0.85, 0.1);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+}
+
+.word-question{
+  display: block;
+  width: calc(100% - 2rem);
+  height: 3rem;
+
+  margin: 0;
+  padding: 0 1rem;
+
+  color: var(--text1);
+  font-size: 1rem;
+  font-weight: 500;
+
+  text-align: justify;
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+.word-answer{
+  display: block;
+  width: calc(100% - 2rem);
+  height: 3rem;
+
+  margin: 0;
+  padding: 0 1rem;
+
+  color: var(--text1);
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  text-align: justify;
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+/* ======================================== */
+
+footer{
+  display: block;
+
+  width: calc(100% - 6rem);
+  height: 3rem;
+
+  margin: 3rem 3rem 0 3rem;
+  padding: 0;
+
+  background-color: var(--accent3);
+
+  color: var(--background2);
+  font-size: 1rem;
+  font-weight: 400;
+
+  text-align: center;
+  line-height: 3rem;
+  text-decoration: none;
+}
