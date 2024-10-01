@@ -53,14 +53,8 @@ html, body{
 
   font-family: "IBM Plex Sans JP", sans-serif;
   font-size: 10px;
-}
 
-html{
-  background-color: var(--background2);
-}
-
-body{
-  background-color: var(--background2);
+  background-color: var(--background1);
 }
 
 /* ======================================== */
@@ -111,8 +105,8 @@ span#top{
 /* ======================================== */
 
 main{
-  display: grid;
-  grid-template-rows: repeat(10, 1fr);
+  display: flex;
+  flex-direction: column;
 
   width: calc(100% - 6rem);
   height: auto;
@@ -124,14 +118,12 @@ main{
 /* ======================================== */
 
 .word-container{
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-
+  display: block;
   width: 100%;
-  height: 6rem;
+  height: auto;
 
   margin: 1rem auto;
-  padding: 1rem 0;
+  padding: 0;
 
   background-color: var(--background3);
   border-radius: 0.75rem;
@@ -141,30 +133,13 @@ main{
   -webkit-backdrop-filter: blur(0.5rem);
 }
 
-.word-question{
+.word{
   display: block;
-  width: calc(100% - 2rem);
+  width: calc(100% - 4rem);
   height: 3rem;
 
   margin: 0;
-  padding: 0 1rem;
-
-  color: var(--text1);
-  font-size: 1rem;
-  font-weight: 500;
-
-  text-align: justify;
-  line-height: 3rem;
-  text-decoration: none;
-}
-
-.word-answer{
-  display: block;
-  width: calc(100% - 2rem);
-  height: 3rem;
-
-  margin: 0;
-  padding: 0 1rem;
+  padding: 0.5rem 2rem;
 
   color: var(--text1);
   font-size: 1.5rem;
@@ -175,6 +150,38 @@ main{
   text-decoration: none;
 }
 
+.answer{
+  display: grid;
+  grid-template-rows: 0fr;
+
+  width: calc(100% - 4rem);
+  height: auto;
+
+  margin: 0;
+  padding: 0 2rem;
+
+  color: var(--text1);
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  text-align: justify;
+  line-height: 1.75rem;
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition: all .25s;
+}
+
+.word-container.active .answer{
+  grid-template-rows: 1fr;
+  padding: 0 2rem 1rem 2rem;
+}
+
+.answer>p{
+  overflow: hidden;
+}
+
 /* ======================================== */
 
 footer{
@@ -183,11 +190,18 @@ footer{
   width: calc(100% - 6rem);
   height: 3rem;
 
-  margin: 3rem 3rem 0 3rem;
+  margin: 3rem;
   padding: 0;
 
   background-color: var(--accent3);
+  border-radius: 0.75rem;
 
+  box-shadow: 0 0.5rem 3rem rgba(0.85, 0.85, 0.85, 0.1);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+}
+
+footer>p{
   color: var(--background2);
   font-size: 1rem;
   font-weight: 400;
