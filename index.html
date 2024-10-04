@@ -44,7 +44,7 @@
 
     <span id="top"></span>
 
-    <main>
+    <main id="main">
       <div class="word-container" id="word-container1">
         <p class="num"></p>
         <div>
@@ -144,14 +144,34 @@
           </div>
         </div>
       </div>
+
+      <div id="controls-main">
+        <button id="swap-or-order">順番に</button>
+        <button id="prev">前の10コ</button>
+        <button id="next">次の10コ</button>
+      </div>
+      <button class="changeModeBtn" id="testMode">チェックスタート!</button>
     </main>
 
-    <div class="controls">
-      <button id="swap-or-order">順番に並べる</button>
-      <button id="prev">前の単語へ</button>
-      <button id="next">次の単語へ</button>
-    </div>
+    <main id="test-frame">
+      <div id="test-container">
+        <p id="test-word"></p>
+        <div id="test-answer-box">
+          <button class="test-answer" id="test-answer1"></button>
+          <button class="test-answer" id="test-answer2"></button>
+          <button class="test-answer" id="test-answer3"></button>
+          <button class="test-answer" id="test-answer4"></button>
+          <button class="test-answer" id="test-answer5">わからない</button>
+        </div>
+      </div>
 
+      <div id="controls-test">
+        <button id="prev-test">前の問題</button>
+        <button id="next-test">次の問題</button>
+      </div>
+      <button class="changeModeBtn" id="mainMode">単語を覚えなおす...</button>
+    </main>
+    
     <footer>
       <p>Copyright &copy; 2024 NearFactory</p>
     </footer>
